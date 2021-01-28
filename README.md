@@ -38,7 +38,7 @@ docker exec -it infra_sp2_web_1 bash
 # python manage.py loaddata fixtures.json
 ```
 
-# Устранение неполадок 
+### Устранение неполадок 
 
 В случае проблем с миграциями:
 
@@ -109,7 +109,7 @@ Did not find an
 Далее повторно выполните миграции и загрузку фикстур
 
 
-# Авторы
+### Авторы
 
 [Ирина Назарова](https://github.com/Irina-Nazarova)  - написала категории (Categories), жанры (Genres) и произведения (Titles): модели, view и эндпойнты для них.
 
