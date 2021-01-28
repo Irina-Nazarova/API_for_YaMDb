@@ -38,7 +38,7 @@ docker exec -it infra_sp2_web_1 bash
 # python manage.py loaddata fixtures.json
 ```
 
-# Troubleshuting 
+# Устранение неполадок 
 
 В случае проблем с миграциями:
 
