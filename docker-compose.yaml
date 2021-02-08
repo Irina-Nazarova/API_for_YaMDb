@@ -13,9 +13,21 @@ services:
   web:
     build: .
     restart: always
-    ports:
-      - "8000:8000"
+    volumes:
+      - ./static_volume:/code/static
+      - ./media_volume:/code/media
     depends_on:
       - db
     env_file:
       - ./.env
+    expose:
+      - 8000
+  nginx:
+    build: ./nginx
+    depends_on:
+      - web
+    ports:
+      - 80:80
+    volumes:
+      - ./static_volume:/code/static
+      - ./media_volume:/code/media
