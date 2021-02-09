@@ -6,5 +6,5 @@ from .models import UserRole
 class IsAdminOrSuperUser(permissions.BasePermission):
     """Права доступа для администратора."""
 
-    def has_permission(self, request, view):
+    def has_permission(self, request):
         return request.user.is_authenticated and request.user.is_admin
