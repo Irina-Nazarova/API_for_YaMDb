@@ -1,5 +1,9 @@
-from rest_framework.permissions import (SAFE_METHODS, AllowAny, BasePermission,
-                                        IsAdminUser)
+from rest_framework.permissions import (
+    SAFE_METHODS,
+    AllowAny,
+    BasePermission,
+    IsAdminUser,
+)
 
 from users.models import UserRole
 

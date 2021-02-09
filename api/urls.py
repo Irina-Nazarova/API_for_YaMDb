@@ -3,8 +3,13 @@ from rest_framework.routers import DefaultRouter
 
 from users import views
 
-from .views import (CategoryViewSet, CommentViewSet, GenreViewSet,
-                    ReviewViewSet, TitleViewSet)
+from .views import (
+    CategoryViewSet,
+    CommentViewSet,
+    GenreViewSet,
+    ReviewViewSet,
+    TitleViewSet,
+)
 
 router_v1_auth = [
     path("email/", views.get_confirmation_code),

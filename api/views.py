@@ -8,9 +8,14 @@ from .filters import TitleFilter
 from .mixins import CustomViewSet
 from .models import Category, Genre, Review, Title
 from .permissions import IsAuthorOrStaff, PermissionMixin
-from .serializers import (CategorySerializer, CommentSerializer,
-                          GenreSerializer, ReviewSerializer,
-                          TitleCreateSerializer, TitleReadSerializer)
+from .serializers import (
+    CategorySerializer,
+    CommentSerializer,
+    GenreSerializer,
+    ReviewSerializer,
+    TitleCreateSerializer,
+    TitleReadSerializer,
+)
 
 
 class TitleViewSet(PermissionMixin, viewsets.ModelViewSet):

@@ -9,8 +9,12 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 from .models import User
 from .permissions import IsAdminOrSuperUser
-from .serializers import (ConfirmationCodeSerializer, MeSerializer,
-                          UserEmailSerializer, UserSerializer)
+from .serializers import (
+    ConfirmationCodeSerializer,
+    MeSerializer,
+    UserEmailSerializer,
+    UserSerializer,
+)
 from .utils import send_message
 
 
