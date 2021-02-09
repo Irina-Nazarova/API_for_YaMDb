@@ -5,7 +5,7 @@ from rest_framework.permissions import (
     IsAdminUser,
 )
 
-from users.models import UserRole
+#from users.models import UserRole
 
 
 class PermissionMixin:
@@ -26,7 +26,7 @@ class IsAuthorOrStaff(BasePermission):
     Доступ для автора, модератора или администратора.
     """
 
-    def has_object_permission(self, request, view, obj):
+    def has_object_permission(self, request, obj):
 
         return (
             request.method in SAFE_METHODS
