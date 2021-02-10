@@ -61,10 +61,10 @@ jobs:
          host: ${{ secrets.HOST }}
          username: ${{ secrets.USER }}
          key: ${{ secrets.SSH_KEY }}
-         rm: true
+         rm: True
          passphrase: ${{ secrets.PASSPHRASE }}
-         source: docker-compose.yaml, .env, "nginx/*, Dockerfile
-         target: API_for_YaMDb
+         source: docker-compose.yaml, .env, nginx, Dockerfile
+         target: yamdb
 
      - name: Run app using docker-compose
        uses: appleboy/ssh-action@master
@@ -74,7 +74,7 @@ jobs:
          key: ${{ secrets.SSH_KEY }}
          passphrase: ${{ secrets.PASSPHRASE }}
          script: |
-           cd API_for_YaMDb
+           cd yamdb
            sudo docker-compose up --force-recreate -d
            sudo docker-compose exec -T web python manage.py migrate --noinput
 
