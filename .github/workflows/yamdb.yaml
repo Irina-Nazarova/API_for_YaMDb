@@ -75,8 +75,9 @@ jobs:
          passphrase: ${{ secrets.PASSPHRASE }}
          script: |
            cd yamdb
+           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
            sudo docker-compose up --force-recreate -d
-           sudo docker-compose exec -T web python manage.py migrate --noinput
+      #sudo docker-compose exec -T web python manage.py migrate --noinput
 
   send_message:
     runs-on: ubuntu-latest

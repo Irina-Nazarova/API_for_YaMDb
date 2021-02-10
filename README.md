@@ -1,4 +1,4 @@
-![](https://github.com/Irina-Nazarova/yamdb_final/workflows/Yamdb-app%20workflow/badge.svg)
+![Build Status](https://github.com/Irina-Nazarova/API_for_YaMDb/workflows/Yamdb-app%20workflow/badge.svg)
 
 # API Yamdb
 
