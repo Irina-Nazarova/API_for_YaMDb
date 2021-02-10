@@ -61,7 +61,7 @@ def get_confirmation_code(request):
 
     confirmation_code = uuid4()
 
-    user = User.objects.create(
+    User.objects.create(
         email=email, confirmation_code=confirmation_code
     )
 
