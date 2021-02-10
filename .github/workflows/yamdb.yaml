@@ -61,7 +61,7 @@ jobs:
          host: ${{ secrets.HOST }}
          username: ${{ secrets.USER }}
          key: ${{ secrets.SSH_KEY }}
-         rm: True
+         #rm: True
          passphrase: ${{ secrets.PASSPHRASE }}
          source: docker-compose.yaml, .env, nginx, Dockerfile
          target: yamdb
