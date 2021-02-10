@@ -11,7 +11,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: irinanazarova/API_for_YaMDb:latest
+    image: irinanazarova/yamdb:latest
     restart: always
     volumes:
       - ./static_volume:/code/static
