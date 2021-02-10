@@ -74,7 +74,7 @@ jobs:
          passphrase: ${{ secrets.PASSPHRASE }}
          script: |
            cd yamdb
-           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
+           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb:latest
            sudo docker-compose up --force-recreate -d
            sudo docker image prune -f
 
