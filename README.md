@@ -1,3 +1,5 @@
+![Build Status](https://github.com/Irina-Nazarova/API_for_YaMDb/workflows/Yamdb-app%20workflow/badge.svg)
+
 # API Yamdb
 
 Yamdb — база отзывов о фильмах, книгах и музыке. Для этой базы был написан RESTfull API. Проект можно развернуть в трех Docker-контейнерах с помощью docker-compose.
