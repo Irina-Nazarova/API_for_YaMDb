@@ -47,7 +47,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: True
-          tags: irinanazarova/API_for_YaMDb:latest
+          tags: irinanazarova/yamdb:latest
 
   deploy:
    runs-on: ubuntu-latest
