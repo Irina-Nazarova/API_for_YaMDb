@@ -61,7 +61,6 @@ jobs:
          host: ${{ secrets.HOST }}
          username: ${{ secrets.USER }}
          key: ${{ secrets.SSH_KEY }}
-         rm: True
          passphrase: ${{ secrets.PASSPHRASE }}
          source: docker-compose.yaml, .env, nginx, Dockerfile
          target: yamdb
@@ -75,8 +74,9 @@ jobs:
          passphrase: ${{ secrets.PASSPHRASE }}
          script: |
            cd yamdb
+           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb:latest
            sudo docker-compose up --force-recreate -d
-           sudo docker-compose exec -T web python manage.py migrate --noinput
+           sudo docker image prune -f
 
   send_message:
     runs-on: ubuntu-latest
